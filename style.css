@@ -7,25 +7,36 @@
 }
 
 :root {
-  --clr-soft-violet-bg: hsl(273, 75%, 66%);
-  --clr-soft-blue-bg: hsl(240, 73%, 65%);
-  --clr-light-grayish-blue-bg: hsl(240, 5%, 91%);
+  --clr-soft-violet-bg: 273, 75%, 66%;
+  --clr-soft-blue-bg: 240, 73%, 65%;
+  --clr-light-grayish-blue-bg: 240, 5%, 91%;
+  --clr-white-bg: 360, 100%, 100%;
 
-  --clr-dark-desaturated-blue-text: hsl(238, 29%, 16%);
-  --clr-soft-red-text: hsl(14, 88%, 65%);
-  --clr-very-dark-grayish-blue-text: hsl(237, 12%, 33%);
-  --clr-dark-grayish-blue-text: hsl(240, 6%, 50%);
+  --clr-dark-desaturated-blue-text: 238, 29%, 16%;
+  --clr-soft-red-text: 14, 88%, 65%;
+  --clr-very-dark-grayish-blue-text: 237, 12%, 33%;
+  --clr-dark-grayish-blue-text: 240, 6%, 50%;
 
   --font-12-regular: 400 0.75rem/1rem 'Kumbh Sans', sans-serif;
+  --font-14-regular: 400 0.875rem/1.05rem 'Kumbh Sans', sans-serif;
   --font-16-regular: 400 1rem/1.25rem 'Kumbh Sans', sans-serif;
   --font-18-regular: 400 1.125rem/1.375rem 'Kumbh Sans', sans-serif;
+
+  --font-16-bold: 700 1rem/1.25rem 'Kumbh Sans', sans-serif;
   --font-18-bold: 700 1.125rem/1.375rem 'Kumbh Sans', sans-serif;
+  --font-40-bold: 700 2.5rem/3rem 'Kumbh Sans', sans-serif;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   margin: 0;
   font-family: 'Kumbh Sans', sans-serif;
-  /* height: 100vh;
+  height: 100%;
+
+  /* 
   width: 100%;
   overflow: hidden;
   background-color: var(--clr-dark-cyan);
@@ -36,14 +47,101 @@ body {
 
 /* background */
 .container {
-  background: linear-gradient(#e66465, #9198e5);
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--clr-soft-violet-bg)),
+    hsl(var(--clr-soft-blue-bg))
+  );
+}
+
+.card {
+  background: hsl(var(--clr-white-bg));
 }
 
 /* Typography */
+.card-title {
+  font: var(--font-40-bold);
+  color: hsl(var(--clr-dark-desaturated-blue-text));
+}
+.question {
+  font: var(--font-16-regular);
+  color: hsl(var(--clr-dark-desaturated-blue-text));
+}
+.answer {
+  font: var(--font-16-regular);
+  color: hsl(var(--clr-dark-grayish-blue-text));
+}
+
+/* class helpers */
+
+.hidden {
+  display: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
 
 /*///////////////////////////////*/
 /* SECTIONS */
 /*///////////////////////////////*/
+
+.container {
+  padding: 2em 1em;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card */
+.card {
+  margin: 2em auto;
+  padding: 2em 1.5em;
+  border-radius: 1.5em;
+  max-width: 400px;
+}
+.picture-area {
+}
+.card-content {
+}
+.card-title {
+  text-align: center;
+  margin: 1em auto;
+}
+
+.question-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-and-answer {
+  padding: 1em 0;
+  border-bottom: 2px solid hsl(var(--clr-light-grayish-blue-bg));
+}
+
+.answer-area {
+  margin-top: 0.75em;
+  transition: display 2s;
+}
+
+.question,
+.answer {
+  max-width: 90%;
+}
+
+.question:hover,
+.question:active {
+  color: hsl(var(--clr-soft-red-text));
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+}
 
 .attribution {
   font-size: 11px;
