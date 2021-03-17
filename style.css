@@ -7,18 +7,19 @@
 }
 
 :root {
-  /* --clr-dark-desaturated-blue-text: hsl(229, 23%, 23%);
-  --clr-dark-grayish-blue-text: hsl(227, 10%, 46%);
-  --clr-dark-gray-text: hsl(0, 0%, 59%);
+  --clr-soft-violet-bg: hsl(273, 75%, 66%);
+  --clr-soft-blue-bg: hsl(240, 73%, 65%);
+  --clr-light-grayish-blue-bg: hsl(240, 5%, 91%);
 
-  --clr-dark-cyan: hsl(185, 75%, 39%);
-  --clr-gray: hsl(195, 6%, 87%);
-  --clr-white: #ffffff;
+  --clr-dark-desaturated-blue-text: hsl(238, 29%, 16%);
+  --clr-soft-red-text: hsl(14, 88%, 65%);
+  --clr-very-dark-grayish-blue-text: hsl(237, 12%, 33%);
+  --clr-dark-grayish-blue-text: hsl(240, 6%, 50%);
 
   --font-12-regular: 400 0.75rem/1rem 'Kumbh Sans', sans-serif;
   --font-16-regular: 400 1rem/1.25rem 'Kumbh Sans', sans-serif;
   --font-18-regular: 400 1.125rem/1.375rem 'Kumbh Sans', sans-serif;
-  --font-18-bold: 700 1.125rem/1.375rem 'Kumbh Sans', sans-serif; */
+  --font-18-bold: 700 1.125rem/1.375rem 'Kumbh Sans', sans-serif;
 }
 
 body {
@@ -34,6 +35,9 @@ body {
 }
 
 /* background */
+.container {
+  background: linear-gradient(#e66465, #9198e5);
+}
 
 /* Typography */
 
