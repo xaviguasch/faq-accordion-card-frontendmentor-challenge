@@ -35,14 +35,6 @@ body {
   margin: 0;
   font-family: 'Kumbh Sans', sans-serif;
   height: 100%;
-
-  /* 
-  width: 100%;
-  overflow: hidden;
-  background-color: var(--clr-dark-cyan);
-  display: flex;
-  justify-content: center;
-  align-items: center;  */
 }
 
 /* background */
@@ -68,7 +60,7 @@ body {
   color: hsl(var(--clr-dark-desaturated-blue-text));
 }
 .answer {
-  font: var(--font-16-regular);
+  font: var(--font-14-regular);
   color: hsl(var(--clr-dark-grayish-blue-text));
 }
 
@@ -99,36 +91,52 @@ body {
 
 /* Card */
 .card {
-  margin: 2em auto;
+  margin: 8em auto;
   padding: 2em 1.5em;
   border-radius: 1.5em;
-  max-width: 400px;
+  width: 380px;
 }
 .picture-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration {
+  margin-top: -8.7em;
+  margin-left: -1.5em;
+}
+.illustration-desktop {
+  display: none;
+}
+
+.shadow-for-illustration {
+  margin-top: -5em;
+}
+.shadow-for-illustration-desktop {
+  display: none;
 }
 .card-content {
 }
 .card-title {
   text-align: center;
-  margin: 1em auto;
+  margin: 0.5em auto;
 }
 
-.question-area {
-  display: flex;
-  justify-content: space-between;
+.card-faq {
+  padding-bottom: 1.5em;
 }
 
 .question-and-answer {
   padding: 1em 0;
   border-bottom: 2px solid hsl(var(--clr-light-grayish-blue-bg));
 }
-
-.answer-area {
-  margin-top: 0.75em;
-  transition: display 2s;
+.question-area {
+  display: flex;
+  justify-content: space-between;
 }
 
-.question,
 .answer {
   max-width: 90%;
 }
@@ -136,6 +144,10 @@ body {
 .question:hover,
 .question:active {
   color: hsl(var(--clr-soft-red-text));
+}
+
+.answer-area {
+  margin-top: 0.75em;
 }
 
 /* Footer */
@@ -149,4 +161,54 @@ footer {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1050px) {
+  .card {
+    min-width: 900px;
+    display: flex;
+    justify-content: center;
+    padding: 4em 3em;
+    position: relative;
+    height: 550px;
+  }
+
+  .card-content {
+    position: relative;
+    right: -20%;
+    width: 50%;
+  }
+
+  .card-title {
+    text-align: left;
+  }
+
+  .answer {
+    max-width: 95%;
+  }
+
+  .picture-area {
+    position: absolute;
+    top: 12.5%;
+    left: -15%;
+    width: 50%;
+  }
+
+  .illustration {
+    display: none;
+  }
+  .shadow-for-illustration {
+    display: none;
+  }
+  .illustration-desktop {
+    display: block;
+    width: 100%;
+  }
+  .shadow-for-illustration-desktop {
+    position: absolute;
+    bottom: -20%;
+    z-index: 0;
+    display: block;
+    width: 100%;
+  }
 }
